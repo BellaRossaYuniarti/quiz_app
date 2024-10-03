@@ -15,6 +15,16 @@ class QuizScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Text(
+                  'Quizederhana',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+                const SizedBox(height: 20),
                 if (quizProvider.currentQuestionIndex <
                     quizProvider.questions.length) ...[
                   Text(
@@ -27,8 +37,8 @@ class QuizScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   Container(
-                    width: 332,
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(24.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 32.0),
                     decoration: BoxDecoration(
                       border: Border.all(color: Color(0xFF2C2C2C)),
                       borderRadius: BorderRadius.circular(24),
@@ -42,6 +52,7 @@ class QuizScreen extends StatelessWidget {
                           color: Color(0xFF1E1E1E),
                           fontSize: 16,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
